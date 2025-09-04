@@ -23,7 +23,7 @@ public class Assinador {
             String pdfOriginal = "./documento_original.pdf";
             String pdfAssinado = "./documento_assinado.pdf";
 
-            // Carrega a biblioteca BouncyCastle, é usada para criptograr/assinar
+            // Carrega o BouncyCastle, é usada para criptograr/assinar
             Security.addProvider(new BouncyCastleProvider());
 
             // Cria um KeyStore do tipo PKCS12 (é o tipo do arquivo de certificado digital
@@ -37,10 +37,8 @@ public class Assinador {
 
             // Recupera a chave privada do certificado
             PrivateKey privateKey = (PrivateKey) keystore.getKey(alias, senhaCertificado.toCharArray());
-            // Recupera a cadeia de certificados, cadeia pois tem o meu certificado e o
-            // certificado da empresa que emitiu o certificado do meu certificado
-            // no caso ainda não tem mas é necessário ser a cadeia
-            Certificate[] chain = keystore.getCertificateChain(alias);
+      
+            Certificate[] chain = keystore.getCertificateChain(alias); 
 
             // Lê o documento PDF original
             PdfReader reader = new PdfReader(pdfOriginal);
@@ -78,7 +76,7 @@ public class Assinador {
             System.out.println("PDF assinado: " + pdfAssinado);
 
         } catch (Exception e) {
-            System.err.println("Erro ao assinar o PDF: " + e.getMessage());
+            System.err.println("Erro: " + e.getMessage());
             e.printStackTrace();
         }
     }
