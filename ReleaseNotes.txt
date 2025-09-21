@@ -1,0 +1,4 @@
+Release Notes - v0.0.1 (21/09/2025)
+
+Resumo:
+- Ajustada a estrutura de pacotes do projeto.
