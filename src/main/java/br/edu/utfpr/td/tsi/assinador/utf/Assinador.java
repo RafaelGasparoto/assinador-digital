@@ -1,4 +1,4 @@
-package projeto.extensao.assinador;
+package br.edu.utfpr.td.tsi.assinador.utf;
 
 import com.itextpdf.io.image.ImageDataFactory;
 import com.itextpdf.kernel.geom.Rectangle;
