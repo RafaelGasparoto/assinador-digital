@@ -2,3 +2,8 @@ Release Notes - v0.0.1 (21/09/2025)
 
 Resumo:
 - Ajustada a estrutura de pacotes do projeto.
+
+Release Notes - v0.0.2 (21/09/2025)
+
+Resumo:
+- Ajustado gitignore para arquivos de configuração da IDE.
