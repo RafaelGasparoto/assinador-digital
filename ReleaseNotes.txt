@@ -7,3 +7,10 @@ Release Notes - v0.0.2 (21/09/2025)
 
 Resumo:
 - Ajustado gitignore para arquivos de configuração da IDE.
+
+Release Notes - v0.1.0 (24/09/2025)
+
+Resumo:
+- Criado base para o projeto spring boot
+- Criado serviço com método de assinatura de pdf
+- Criado endpoint /assinatura/assinar para consumir funcionalidade de assinatura, recebe um documento pdf e retorna assinado
