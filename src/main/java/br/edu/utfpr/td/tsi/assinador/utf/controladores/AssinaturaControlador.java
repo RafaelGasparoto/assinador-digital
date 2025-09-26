@@ -1,6 +1,4 @@
-package br.edu.utfpr.td.tsi.assinador.utf.controlador;
-
-import br.edu.utfpr.td.tsi.assinador.utf.servico.AssinaturaServico;
+package br.edu.utfpr.td.tsi.assinador.utf.controladores;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
+
+import br.edu.utfpr.td.tsi.assinador.utf.servicos.AssinaturaServico;
 
 @RestController
 @RequestMapping("/assinatura")
