@@ -1,3 +1,7 @@
+jwt:
+  secret: ${JWT_SEGREDO}
+  expiration: ${JWT_EXPIRACAO}
+  
 server:
   servlet:
     context-path: /api
