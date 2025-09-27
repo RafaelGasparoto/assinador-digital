@@ -16,6 +16,9 @@ public class AutenticacaoServico {
 
 	@Autowired
 	private UsuarioRepositorio usuarioRepositorio;
+	
+	@Autowired
+	private JwtUtil jwtUtil;
 
 	@Autowired
 	private EmailServico emailServico;
@@ -60,6 +63,6 @@ public class AutenticacaoServico {
 		usuarioRepositorio.save(usuario);
 
 		// Aqui você gera e retorna o JWT
-		return JwtUtil.gerarToken(usuario.getEmail());
+		return jwtUtil.gerarToken(usuario.getEmail());
 	}
 }
