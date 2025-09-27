@@ -1,4 +1,4 @@
-package br.edu.utfpr.td.tsi.assinador.utf.configuracao;
+package br.edu.utfpr.td.tsi.assinador.utf.tratamento;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -37,5 +37,4 @@ public class TratamentoExcecaoGlobal {
         error.put("error", "Falha ao processar arquivo: " + ex.getMessage());
         return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
     }
-
 }
