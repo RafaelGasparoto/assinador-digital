@@ -1,3 +1,7 @@
+jwt:
+  secret: ${JWT_SEGREDO}
+  expiration: ${JWT_EXPIRACAO}
+  
 server:
   servlet:
     context-path: /api
@@ -8,6 +12,19 @@ spring:
     username: ${DB_USUARIO}
     password: ${DB_SENHA}
     driver-class-name: com.mysql.cj.jdbc.Driver
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${EMAIL_LOGIN}
+    password: ${EMAIL_SENHA}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
   jpa:
     hibernate:
       ddl-auto: none
