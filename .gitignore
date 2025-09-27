@@ -8,3 +8,5 @@ target/
 /certificado.pfx
 /documento_assinado.pdf
 /documento_original.pdf
+
+.env

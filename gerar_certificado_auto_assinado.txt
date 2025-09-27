@@ -1,0 +1,9 @@
+keytool -genkeypair ^
+ -alias teste-cert ^
+ -keyalg RSA ^
+ -keysize 2048 ^
+ -validity 365 ^
+ -storetype PKCS12 ^
+ -keystore certificado.pfx ^
+ -storepass 123456 ^
+ -dname "CN=Grupo 1, OU=Alunos, O=ProjetoAssinador, L=Toledo, ST=PR, C=BR"

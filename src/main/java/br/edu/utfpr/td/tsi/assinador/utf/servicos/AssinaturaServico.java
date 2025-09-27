@@ -1,4 +1,4 @@
-package br.edu.utfpr.td.tsi.assinador.utf.servico;
+package br.edu.utfpr.td.tsi.assinador.utf.servicos;
 
 import com.itextpdf.io.image.ImageDataFactory;
 import com.itextpdf.kernel.geom.Rectangle;
