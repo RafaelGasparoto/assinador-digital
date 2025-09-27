@@ -19,14 +19,14 @@ public class AutenticacaoControlador {
     // valida email/senha e envia código por email
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody @Valid LoginRequisicaoDTO dto) {
-    	autenticacaoServico.loginPasso1(dto.email(), dto.senha());
+    	autenticacaoServico.validarEmailSenha(dto.email(), dto.senha());
         return ResponseEntity.ok("Código enviado para o seu email");
     }
 
     // valida código verificação de 2 fatores, retorna JWT
     @PostMapping("/verificar")
-    public ResponseEntity<String> verificarLogin(@RequestBody @Valid VerificarLoginRequisicaoDTO dto) {
-        String token = autenticacaoServico.loginPasso2(dto.email(), dto.codigo());
+    public ResponseEntity<String> validarAutenticacao(@RequestBody @Valid VerificarLoginRequisicaoDTO dto) {
+        String token = autenticacaoServico.validarCodigoAutenticacao(dto.email(), dto.codigo());
         return ResponseEntity.ok(token);
     }
 }
