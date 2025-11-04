@@ -5,8 +5,16 @@ jwt:
 server:
   servlet:
     context-path: /api
+  tomcat:
+    max-swallow-size: 20MB
 
 spring:
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 20MB
+      max-request-size: 20MB
+
   datasource:
     url: jdbc:mysql://${DB_HOST}:${DB_PORTA}/${DB_NOME}?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
     username: ${DB_USUARIO}
