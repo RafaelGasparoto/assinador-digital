@@ -26,7 +26,7 @@ As configurações sensíveis (banco de dados, e-mail e JWT) são carregadas via
 ## Pré-requisitos
 
 - Java 21 
-- MySQL instalado e rodando
+- MySQL https://dev.mysql.com/downloads/mysql/8.0.html
 
 ---
 
